@@ -49,9 +49,11 @@ title: "Some useful tips for Vim"
 
 ## Miscellaneous
 
-1. To enable spell check :setlocal spell spelllang=en\_us
+1. To enable spell check :setlocal spell spelllang=en\_us .
 
-2. :terminal to open terminal, \<C-\\\>\<C-n\> to enter vim mode to enable go up and go down
+2. :terminal to open terminal, \<C-\\\>\<C-n\> to enter vim mode to enable go up and go down.
+
+3. g, \<C-g\> to see the word count. 
 
 ## Plugins
 
