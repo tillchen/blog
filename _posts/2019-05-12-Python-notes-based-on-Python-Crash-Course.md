@@ -19,7 +19,7 @@ title: " Python notes based on Python Crash Course: A Hands-On, Project-Based In
     # Output: 14000000000
     ```
 2. Multiple Assignment: `x, y, z = 1, 2, 3`
-3. Constants: No-built in constants, use uppercase as a convention (like in C/C++). `MAX = 100` 
+3. Constants: No-built in constants, use uppercase as a convention (like in C/C++): `MAX = 100` 
 4. Exponential: Use \*\*: `a = 2 ** 3 #8`
 5. range(): `range(1,11,2)` is 1, 3, 5, 7, 9  
 
@@ -65,7 +65,7 @@ title: " Python notes based on Python Crash Course: A Hands-On, Project-Based In
     
 ## Tuples
 
-1. Tuples can't be modified: `A = (1,2)` `A[0] = 3` doe zsn't work.
+1. Tuples can't be modified: `A = (1,2)` `A[0] = 3` doesn't work.
 2. But tuples can be reassigned `A = (1,2)` `A = (3,2)` works.
 
 ## Dictionaries 
@@ -157,12 +157,12 @@ title: " Python notes based on Python Crash Course: A Hands-On, Project-Based In
 6. Importing:
 
     ```python
-    from module_name import func_1, func_2, func_3 #importing multiple fucntions
+    from module_name import func_1, func_2, func_3 #importing multiple functions
     
     from module_name import func_1 as f #alias
     import module_name as m #alias
     from module_name import * #all functions
-    # We must import everthing at the beginning of each file
+    # We must import everything at the beginning of each file
     ```
     
 ## OOP
