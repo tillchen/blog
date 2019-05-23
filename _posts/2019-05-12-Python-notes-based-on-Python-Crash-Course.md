@@ -1,7 +1,6 @@
 ---
 layout: post
 title: " Python notes based on Python Crash Course: A Hands-On, Project-Based Introduction to Programming"
-comments: true
 ---
 
 ## Strings
