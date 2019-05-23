@@ -1,6 +1,7 @@
 ---
 layout: post
 title: " Python notes based on Python Crash Course: A Hands-On, Project-Based Introduction to Programming"
+comments: true
 ---
 
 ## Strings
@@ -18,18 +19,19 @@ title: " Python notes based on Python Crash Course: A Hands-On, Project-Based In
     print (universe_age)
     # Output: 14000000000
     ```
+
 2. Multiple Assignment: `x, y, z = 1, 2, 3`
 3. Constants: No-built in constants, use uppercase as a convention (like in C/C++): `MAX = 100` 
-4. Exponential: Use \*\*: `a = 2 ** 3 #8`
+4. Exponential: Use \*\*: `a = 2 ** 3`
 5. range(): `range(1,11,2)` is 1, 3, 5, 7, 9  
 
 ## Lists
 
 1. Inserting: `A.insert(0, foo)`
-2. Removing: 
+2. Removing:
     * By index
         * del: `del A[0]`
-        * pop(): 
+        * pop():
             * `last = A.pop()`
             * `first = A.pop(0)`
     * By value
@@ -54,58 +56,58 @@ title: " Python notes based on Python Crash Course: A Hands-On, Project-Based In
     if 6 not in A:
         print ("6 not in A")
     ```
-    
+
 9. With while loops:
 
     ```python
-    while A: #while A is not empty
-        
-    while 1 in A: #while there is 1 in A
+    while A: # while A is not empty
+
+    while 1 in A: # while there is 1 in A
     ```
-    
+
 ## Tuples
 
 1. Tuples can't be modified: `A = (1,2)` `A[0] = 3` doesn't work.
-2. But tuples can be reassigned `A = (1,2)` `A = (3,2)` works.
+2. But tuples can be reassigned: `A = (1,2)` `A = (3,2)` works.
 
-## Dictionaries 
+## Dictionaries
 
-1. Basic usage: 
+1. Basic usage:
 
     ```python
     A = {"language": "python", "age": 19}
     print(A["language"])
-    #Output: python
-    A["height"] = 190 #adding a new pair
-    A["language"] = "C++" #modifying
-    ``` 
-    
+    # Output: python
+    A["height"] = 190 # adding a new pair
+    A["language"] = "C++" # modifying
+    ```
+
 2. get() (When not sure if the key exists): `print (A.get("weight", "no weight assigned"))`
-3. Looping through: 
+3. Looping through:
 
     ```python
-    for k,v in A.items(): #keys and values
-    
+    for k,v in A.items(): # keys and values
+
     for k in A.keys(): # equivalent to the line below
     for k in A: # since looping through the keys is default
     for k in sorted(A.keys()) # sorted
-    
+
     for v in A.values(): # just values
-    for v in set(A.values()) #unique values
+    for v in set(A.values()) # unique values
     ```
-    
+
 4. Lists and dictionaries can be nested into each other or themselves.
 
 ## Sets
 
-1. Basic usage: 
+1. Basic usage:
 
     ```python
     languages = {"python", "C++", "C", "python"}
     print (languages)
-    #output {'python', 'C++', 'C'}
+    # Output {'python', 'C++', 'C'}
     ```
-    
+
 ## Input
 
 1. Reading an int: `n = int(input("Please input a number: "))`
@@ -115,56 +117,56 @@ title: " Python notes based on Python Crash Course: A Hands-On, Project-Based In
 1. Optional keyword arguments that avoid confusion:
 
     ```python
-    def minus (a, b):
+    def minus(a, b):
         return (a - b)
-        
+
     print(minus(a=1, b=2)) # is equivalent to the line below
     print(minus(b=2, a=1))
     ```
-    
+
 2. Default values for the parameters can be added:
 
     ```python
-    def minus (a, b = 0):
+    def minus(a, b = 0):
         return (a - b)
-    
+
     print(minus(1))
     ```
-    
+
 3. We can make an argument optional by using None or "":
 
     ```python
     def build_person(first, last, age=None) {
-        person = {"first_name": first, "last_name":  last}
+        person = {"first_name": first, "last_name": last}
         if age:
             person["age"] = age
         return person
     }
     ```
-    
+
 4. To prevent a function from modifying a list, pass the list with full slicing: `foo(A[:])`
 
 5. Variadic functions:
- 
+
     ```python
-    def print_languages(*languages): #The * makes an empty tuple and packs any value it receives
+    def print_languages(*languages): # The * makes an empty tuple and packs any value it receives
         for language in languages:
             print(f"- {language}")
     # more generically, *args
     # **kwargs for key-value pairs
     ```
-    
+
 6. Importing:
 
     ```python
-    from module_name import func_1, func_2, func_3 #importing multiple functions
-    
-    from module_name import func_1 as f #alias
-    import module_name as m #alias
-    from module_name import * #all functions
+    from module_name import func_1, func_2, func_3 # importing multiple functions
+
+    from module_name import func_1 as f # alias
+    import module_name as m # alias
+    from module_name import * # all functions
     # We must import everything at the beginning of each file
     ```
-    
+
 ## OOP
 
 1. Default value:
@@ -179,10 +181,10 @@ title: " Python notes based on Python Crash Course: A Hands-On, Project-Based In
 
     ```python
     from foo import Foo
-    class Foo(Bar): # bar is the parent class
+    class Foo(Bar): # Bar is the parent class
         def __init__(self, value):
-            super().__init__(value) #superclass
-    # we can also override a method by redefining it in the child class. 
+            super().__init__(value) # superclass
+    # we can also override a method by redefining it in the child class.
     ```
     
 3. Conventions:
@@ -196,7 +198,7 @@ title: " Python notes based on Python Crash Course: A Hands-On, Project-Based In
     from random import randint
     print(randint(1,6))
     ```
-    
+
 2. choice:
 
     ```python
@@ -204,7 +206,7 @@ title: " Python notes based on Python Crash Course: A Hands-On, Project-Based In
     A = [1,2,3,4,5,6]
     print(choice(A))
     ```
-    
+
 ## Files
 
 1. Reading an entire file:
@@ -215,10 +217,10 @@ title: " Python notes based on Python Crash Course: A Hands-On, Project-Based In
         # lines = file_obj.readlines() -> a list of lines
         # for line in lines:
             #print(line.rstrip())
-        print(contents.rstrip()) #Removing the additional \n
-        #no need to close, python will do it automatically
+        print(contents.rstrip()) # Removing the additional \n
+        # no need to close, python will do it automatically
     ```
-    
+
 2. Reading line by line:
 
     ```python
@@ -226,12 +228,12 @@ title: " Python notes based on Python Crash Course: A Hands-On, Project-Based In
         for line in file_obj:
             print(line.rstrip())
     ```
-    
+
 3. Writing:
 
     ```python
     # python only writes strings, use str() if necessary
-    with open("file.txt", "w") as file_obj: #"a", "r+"
+    with open("file.txt", "w") as file_obj: # "a", "r+"
         file_obj.write("Python.")
     ```
 
@@ -242,24 +244,24 @@ title: " Python notes based on Python Crash Course: A Hands-On, Project-Based In
     ```python
     try:
         print(1/0)
-    except ZeroDivisionError: 
+    except ZeroDivisionError:
         print("Can't divide by 0.")
-    else: #optional
+    else: # optional
         print("Success")
     ```
 
 2. Failing silently using *pass*:
 
     ```python
-        try:
-            with open("file.txt") as file_obj:
-                content = file_obj.read()
-        except FileNotFoundError:
-            pass
-        else:
-             print(len(content.split()))
+    try:
+        with open("file.txt") as file_obj:
+            content = file_obj.read()
+    except FileNotFoundError:
+        pass
+    else:
+         print(len(content.split())) # word count
     ```
-    
+
 ## Testing
 
 1. Basic unit testing:
@@ -267,14 +269,14 @@ title: " Python notes based on Python Crash Course: A Hands-On, Project-Based In
     ```python
     import unittest
     from file import function_1:
-    
+
     class Func1Test(unittest.TestCase):
         def test(self):
             result = function_1(value)
             self.assertEqual(result, foo)
-    
+
     if __name__ = "__main__":
         unittest.main()
     ```
-    
+
 2. setUp() method can be used to test a class
