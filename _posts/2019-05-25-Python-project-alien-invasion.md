@@ -5,7 +5,7 @@ title: "Python project: Alien Invasion"
 
 Today I finished my first big project called Alien Invasion using [Pygame](https://www.pygame.org):
 
-![demo](blog/assets/demo.gif)
+![demo](demo.gif){:class="img-responsive"}
 
 You can check out [the github repository](https://github.com/tillchen/Alien_Invasion) and try the game.
 
@@ -21,4 +21,4 @@ Plus, it strengthed my coding skills in python and my love for programming:D!
 Some statistics:
 
 According to [WakaTime](https://wakatime.com/), I coded 13 hours and 46 minutes in total for this project (excluding the time for thinking and planning) and more than 8 hours for the main module alien_invasion.py.
-![wakatime](blog/assets/alien_invasion_wakatime.png)
+![wakatime](alien_invasion_wakatime.png){:class="img-responsive"}
