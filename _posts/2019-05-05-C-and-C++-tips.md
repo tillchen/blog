@@ -1,9 +1,7 @@
 ---
 layout: post
-title: "Some useful tips for C and C++"
+title: "C and C++ tips"
 ---
-
-# Here are some useful tips I summarized for C and C++
 
 1. When we initialize an int vector, int array, etc., they are filled with 0s.
 
@@ -11,15 +9,15 @@ title: "Some useful tips for C and C++"
 
 3. The public interface is inherited to the inherited class. (The interface of the base class is a subset of the derived class.)
 
-4. We must initialize static data members outside of the class: 
+4. We must initialize static data members outside of the class:
 
     ```c++
     class foo {
         static int var;
     }
-    
+
     int foo::var = 0;  
-    ```  
+    ```
 
 5. Use virtual destructors when there are virtual methods in the base class.
 
