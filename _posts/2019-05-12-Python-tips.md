@@ -279,3 +279,7 @@ title: " Python tips"
     ```
 
 2. setUp() method can be used to test a class
+
+## References
+
+* [Python Crash Course, 2nd Edition: A Hands-On, Project-Based Introduction to Programming](https://www.amazon.com/Python-Crash-Course-2nd-Edition/dp/1593279280/ref=sr_1_1?keywords=python+crash+course&qid=1558808134&s=gateway&sr=8-1)
