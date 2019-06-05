@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-05-26T00:01:15+02:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Tianyao Chen’s Blog</title><subtitle>Sharing thoughts on Computer Science, Software Development, AI, Machine Learning, etc.</subtitle><entry><title type="html">Git tips</title><link href="http://localhost:4000/blog/2019/05/25/Git-tips.html" rel="alternate" type="text/html" title="Git tips" /><published>2019-05-25T00:00:00+02:00</published><updated>2019-05-25T00:00:00+02:00</updated><id>http://localhost:4000/blog/2019/05/25/Git-tips</id><content type="html" xml:base="http://localhost:4000/blog/2019/05/25/Git-tips.html">&lt;h2 id=&quot;gitignore&quot;&gt;.gitignore&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-06-05T13:40:57+02:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Tianyao Chen’s Blog</title><subtitle>Sharing thoughts on Computer Science, Software Development, AI, Machine Learning, etc.</subtitle><entry><title type="html">Java tips</title><link href="http://localhost:4000/blog/2019/06/05/Java-tips.html" rel="alternate" type="text/html" title="Java tips" /><published>2019-06-05T00:00:00+02:00</published><updated>2019-06-05T00:00:00+02:00</updated><id>http://localhost:4000/blog/2019/06/05/Java-tips</id><content type="html" xml:base="http://localhost:4000/blog/2019/06/05/Java-tips.html">&lt;h2 id=&quot;basics&quot;&gt;Basics&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;SourceCode.java -&amp;gt; Compile (&lt;code class=&quot;highlighter-rouge&quot;&gt;javac source_code.java&lt;/code&gt;) -&amp;gt; Java bytecode (SourceCode.class) -&amp;gt;Run by the Java Virtual Machine (&lt;code class=&quot;highlighter-rouge&quot;&gt;java SouceCode&lt;/code&gt;)
+    &lt;blockquote&gt;
+      &lt;p&gt;Write once, run anywhere!&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Java is syntactically similar to C/C++, which means semicolons &lt;code class=&quot;highlighter-rouge&quot;&gt;;&lt;/code&gt; are important! (Unlike Python :satisfied:)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Every Java app must have at least &lt;strong&gt;one class&lt;/strong&gt; and at least &lt;strong&gt;one main&lt;/strong&gt; method (one main per app not per class.)&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;// code&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Like in C/C++, most whitespace doesn’t matter.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Nearly everything in Java is an object.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Booleans and integers are not compatible (unlike in C/C++ where you can use 1 and 0 to indicate true or false.) Plus, true and false are in &lt;strong&gt;lowercase&lt;/strong&gt; (unlike in Python.)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;System.out.println()&lt;/code&gt; inserts a newline, whereas &lt;code class=&quot;highlighter-rouge&quot;&gt;System.out.print()&lt;/code&gt; doesn’t. Plus, use &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; to concatenate strings:&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The number is &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Basics</summary></entry><entry><title type="html">Git tips</title><link href="http://localhost:4000/blog/2019/05/25/Git-tips.html" rel="alternate" type="text/html" title="Git tips" /><published>2019-05-25T00:00:00+02:00</published><updated>2019-05-25T00:00:00+02:00</updated><id>http://localhost:4000/blog/2019/05/25/Git-tips</id><content type="html" xml:base="http://localhost:4000/blog/2019/05/25/Git-tips.html">&lt;h2 id=&quot;gitignore&quot;&gt;.gitignore&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
