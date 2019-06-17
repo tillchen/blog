@@ -170,25 +170,26 @@ title: "Django tips"
 
     * If we see the error: `ModuleNotFoundError: No module named 'learning_logs.urls'`, just CTRL-C and rerun the server by `python manage.py runserver`.
     * Template inheritance:
-        * Make a base.html file and include it on every page: (template tag:{% %}; bar is the namespace defined in bar/urls.py app_name)
+        * Make a base.html file and include it on every page: (template tag:{percent percent}; bar is the namespace defined in bar/urls.py app_name) (in reality, use **%** instead of percent! here is just for avoiding the markdown error.)
 
             ```html
             <p>
-                <a href="{% url 'bar:index' %}">Foo</a>
+                <a href="{percent url 'bar:index' percent}">Foo</a>
             </p>
 
-            {% block content%}{% endblock content %}
+            {percent block content percent}{percent endblock content percent}
             ```
 
         * Inherit the base.html: (index.html)
 
             ```html
-            {% extends "bar/base.html" %}
+            {percent extends "bar/base.html" percent}
 
-            {% block content %}
+            {percent block content percent}
             <p>Learning Log helps you become a better learner by keeping track of the topic you're learning.</p>
-            {% endblock content %}
+            {percent endblock content percent}
             ```
+
 
 ## References
 
