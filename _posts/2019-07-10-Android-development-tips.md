@@ -84,7 +84,7 @@ title: "Android development tips"
 
 5. `android:layout_weight="number"` makes a view stretch.
     * If a has the weight of 1 and b has 2, a'll have 1/3 and b'll have 2/3 of the screen.
-    * We usually have `android:layout_height="0dp"` above layout_weight.
+    * We usually have `android:layout_height="0dp"` (for vertical layout)above layout_weight.
 
 6. `android:gravity="top"` moves the CONTENT of a view to the top of the view, whereas `android:layout_gravity="end"` moves the placement of the VIEW itself to the end.
 
@@ -93,6 +93,8 @@ title: "Android development tips"
 8. Surround LinearLayout/FrameLayout with `<ScrollView></ScrollView>` to get a vertical scrollbar. (`HorizontalScrollView` for the horizontal scrollbar.)
 
 9. The layout-large folder is for the large devices.
+
+10. A CoordinatorLayout allows the behavior of one view to affect the behavior of another.
 
 ## Activities
 
@@ -218,6 +220,7 @@ title: "Android development tips"
         ```
 
     * `getChildFragmentManager` creates nested transactions.
+
 ## Miscellaneous
 
 1. For nonstatic data (like storing in a java file), use an adapter to access it.
@@ -237,7 +240,7 @@ title: "Android development tips"
 
 4. The `onClick` attribute calls the methods in the activity, not the fragment. To make it work, change the onClick methods to private and make the fragment class implement View.OnClickListener (overriding the `public void onClick(View v)` method.) Then, attach the onClickListener to the buttons in the onCreateView method.
 
-5. For dynamic fragements, use FrameLayout instead of Fragment and use FragmentTransaction.
+5. For dynamic fragments, use FrameLayout instead of Fragment and use FragmentTransaction.
 
 ## Resources
 
