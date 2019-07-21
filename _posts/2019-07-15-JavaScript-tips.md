@@ -43,7 +43,7 @@ title: "JavaScript tips"
             this.name = "coding bar"; // Must add `this.`
             alert.log("I'm coding now.");
         }, // A comma here
-        age: 17 // NO comma here
+        age: 17 // NO comma here. But can be added after ES5. However, not in JSON.
     };
     foo.height = 190; // This adds a new property
     console.log(foo["name"]); // Also works
@@ -55,7 +55,7 @@ title: "JavaScript tips"
 
 2. Like in Java, use `this` and `new` for constructors.
 
-3. JavaScript doesn't have classes. For inheritance, we have prototypal inheritance. (Prototype is like the parent class.)
+3. JavaScript (before ES6) doesn't have classes. For inheritance, we have prototypal inheritance. (Prototype is like the parent class.)
 
     ```javascript
     function Foo(bar, stuff) {
@@ -79,7 +79,7 @@ title: "JavaScript tips"
 
 1. `document.getElementById("foo").innerHTML` gives the content of the html element with the id 'foo'. JavaScript does this by interacting with the DOM.
 
-2. `foo.setAttribute("class", "bar")` sets the attribute for 'bar' and `var text = document.getElementById("bar").getAttribute("alt")` gets the 'alt' attribute.
+2. `foo.setAttribute("class", "bar")` sets the attribute and `var text = document.getElementById("bar").getAttribute("alt")` gets the 'alt' attribute.
 
 ## Handling events
 
