@@ -20,9 +20,9 @@ title: " Python tips"
     ```
 
 2. Multiple Assignment: `x, y, z = 1, 2, 3`
-3. Constants: No-built in constants, use uppercase as a convention (like in C/C++): `MAX = 100` 
+3. Constants: No-built in constants, use uppercase as a convention (like in C/C++): `MAX = 100`
 4. Exponential: Use \*\*: `a = 2 ** 3`
-5. range(): `range(1,11,2)` is 1, 3, 5, 7, 9  
+5. range(): `range(1,11,2)` is 1, 3, 5, 7, 9
 
 ## Lists
 
@@ -135,12 +135,11 @@ title: " Python tips"
 3. We can make an argument optional by using None or "":
 
     ```python
-    def build_person(first, last, age=None) {
+    def build_person(first, last, age=None):
         person = {"first_name": first, "last_name": last}
         if age:
             person["age"] = age
         return person
-    }
     ```
 
 4. To prevent a function from modifying a list, pass the list with full slicing: `foo(A[:])`
@@ -175,7 +174,7 @@ title: " Python tips"
         def __init__(self, value):
             self.value = 0
     ```
-    
+
 2. Inheritance:
 
     ```python
@@ -185,14 +184,14 @@ title: " Python tips"
             super().__init__(value) # superclass
     # we can also override a method by redefining it in the child class.
     ```
-    
+
 3. Conventions:
     * Capitalize the first letter of each word, **without** underscores. Instances and module names use underscores and are in lowercase.
 
 ## Random
 
 1. randint:
- 
+
     ```python
     from random import randint
     print(randint(1,6))
