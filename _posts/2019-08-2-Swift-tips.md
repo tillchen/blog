@@ -18,8 +18,8 @@ title: "Swift tips"
 4. Types are inferred. If we need to make the type explicit, add the type after: (In practice, we rarely need to use the type annotations.)
 
     ```swift
-    var implicitInteger = 70
-    var explicitInteger: Integer = 70
+    var implicitInt = 70
+    var explicitInt: Int = 70
     ```
 
 5. Use `\()` to include values in a string:
@@ -27,6 +27,10 @@ title: "Swift tips"
     ```swift
     var foo = 17
     print("hello world \(foo)")
+    var optionalString: String? = "I exist"
+    print(\(optionalString!)) // forced unwrapping, we are sure the value exists. And ! is required
+    var assumedString: String! = "I definitely exist"
+    print(\(assumedString))
     ```
 
 6. Use `[]` for both arrays and dictionaries. A comma is allowed after the last element.
@@ -40,7 +44,7 @@ title: "Swift tips"
     """
     ```
 
-8. Arrays and dictionaries:
+8. Arrays, dictionaries and sets:
 
     ```swift
     var emptyArray = [String]()
@@ -51,6 +55,7 @@ title: "Swift tips"
     var threeDoubles = Array(repeating: 0.0, count: 3)
     var shoppingList: [String] = ["Eggs", "Milk"]
     var shoppingListInferred = ["Eggs", "Milk"]
+    var fooSet: Set<Int>
     ```
 
 9. The for loop:
@@ -59,8 +64,9 @@ title: "Swift tips"
     * `for (foo, bar) in foobarDictionary {}`.
     * `for i in 0..<4 {}` is equivalent to `for i in range(0, 4):` in python.
     * `for i in 0...4 {}` is equivalent to `for i in range(0, 5):` in python.
+    * `for (index, value) in shoppingList.enumerated()` gives tuples: (0, foo), (1, bar)
 
-10. Add `?` to indicate that the value might be missing: `var optionalString: String? = "foo"` (it can later be set to `nil`.)
+10. Add `?` to indicate that the value might be missing: `var optionalString: String? = "foo"` (it can later be set to `nil`.) (Normal variables can't be `nil`.)
 
 11. Use `??` to provide a default value for an optional:
 
@@ -91,6 +97,12 @@ title: "Swift tips"
     // _ bar: String makes no argument label
     ```
 
+14. `.isEmpty` and `.count` (no parentheses.)
+
+15. By default, the `switch` in Swift doesn't fall through, which means we don't need `break`. (If needed, `fallthrough` can be added.)
+
+16. `@discardableResult func foo() -> String {}` means the return is deiscardable.
+
 ## OOP
 
 1. Use `init()` `super.init` and `self` to make a constructor (similar to python):
@@ -114,6 +126,10 @@ title: "Swift tips"
 
 3. Use `===` and `!==` to see if two references are referring to the same object.
 
+4. A convenience initializer is like a helper, which always calls another initializer in the same class. `convenience init()`
+
 ## References
 
 * The Swift Programming Language
+
+* [iOS Programming: The Big Nerd Ranch Guide](https://www.amazon.com/iOS-Programming-Ranch-Guide-Guides/dp/0134682335/ref=sr_1_2?keywords=ios+programming&qid=1564912891&s=gateway&sr=8-2)
