@@ -3,22 +3,104 @@ layout: post
 title: "C and C++ tips"
 ---
 
+## Basics
+
+1. How to compile:
+
+    ```sh
+    gcc -Wall -o foo foo.c
+    ```
+
+2. Input in C:
+
+    ```c
+    char foo[100];
+    int bar;
+    fgets(foo, sizeof(foo), stdin);
+    scanf("%d", &bar);
+    getchar(); // must be added after scanf. It handels /n
+    ```
+
+3. Input in C++:
+
+    ```c++
+    string foo;
+    getline(cin, foo);
+    ```
+
+4. When two types sum, a promotion happens. When a type is passed to a function, a demotion happens.
+
+5. Prefix and postfix `++` `--` differ when used in an assignment:
+
+    ```c
+    int a = 1;
+    int b = ++a; // a = 2, b = 2
+    int b = a++; // a = 3, b = 2
+    ```
+
+6. 0 is false. Everything else is true.
+
+7. In `argv`, the first name is the program's name.
+
+## Dynamic Memory Allocation
+
+1. In C:
+
+    ```c
+    int* foo;
+    foo = (int*) malloc(sizeof(int) * 10);
+    if (foo == NULL) {
+        // blah blah
+    }
+    free(foo);
+    ```
+
+2. In C++: `T* ptr = new T(value)` is equivalent to `T* ptr = new T[1] {value}` ((value) and {value} can be omitted.) (`delete [] ptr` for arrays; `delete ptr` for single values.)
+
+## Makefiles
+
+1. How to run:
+
+    ```sh
+    make // if no extension
+    ```
+
+    ```sh
+    make -f Mymakefile.txt
+    make
+    ```
+
+## Miscellaneous
+
 1. When we initialize an int vector, int array, etc., they are filled with 0s.
 
-2. `T* ptr = new T(value)` is equivalent to `T* ptr = new T[1] {value}` ((value) and {value} can be omitted.)
+2. The public interface is inherited to the inherited class. (The interface of the base class is a subset of the derived class.)
 
-3. The public interface is inherited to the inherited class. (The interface of the base class is a subset of the derived class.)
-
-4. We must initialize static data members outside of the class:
+3. We must initialize static data members outside of the class:
 
     ```c++
     class foo {
         static int var;
     }
 
-    int foo::var = 0;  
+    int foo::var = 0;
     ```
 
-5. Use virtual destructors when there are virtual methods in the base class.
+4. When we write to a file, the data is first stored in the buffer. When the buffer is flushed, the data is written into the file.
 
-6. When we write to a file, the data is first stored in the buffer. When the buffer is flushed, the data is written into the file.
+5. `const` with pointers
+
+    ```c
+    int a = 2;
+    const int* ptr = &a; // constant data (2), not constant pointer
+    int* const ptr_1 = &a; // constant pointer, not constant data
+    const int* const ptr_2 = &a; // constant pointer and data
+    ```
+
+6. Auto-dereferencing in C++:
+
+    ```c++
+    int foo = 1;
+    int& bar = foo;
+    bar = 2; // Both are 2 now
+    ```
