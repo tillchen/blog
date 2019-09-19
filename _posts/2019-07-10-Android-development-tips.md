@@ -312,7 +312,7 @@ title: "Android development tips"
 
     ![Fragment lifecycle]({{https://tillchen.com}}/images/fragment_lifecycle.png)
 
-2. Example;
+2. Example:
 
     ```java
     public static class ExampleFragment extends Fragment {

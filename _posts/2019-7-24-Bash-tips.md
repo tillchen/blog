@@ -33,11 +33,17 @@ title: "Bash tips"
 
 14. `find . -name "foo*"` finds the files with the name foo* .
 
-## Writing scripts
+## Writing Scripts
 
 1. Put `#!/bin/bash` at the beginning of the script.
 
 2. Use `chmod 755 foo.sh` to make the script executable for everyone. (700 for the owner only.)
+
+## Advanced Tricks
+
+1. `touch {a..z}{0001..0100}.txt` creates multiple files at once.
+
+2. `grep -r "hello" .` searches for hello recursively in the current directory.
 
 ## Resources
 
