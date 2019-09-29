@@ -42,6 +42,8 @@ title: "C and C++ tips"
 
 7. In `argv`, the first name is the program's name.
 
+8. `puts()` will append `\n` to the end of the string and print.
+
 ## Dynamic Memory Allocation
 
 1. In C:

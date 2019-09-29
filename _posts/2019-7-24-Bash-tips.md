@@ -33,6 +33,8 @@ title: "Bash tips"
 
 14. `find . -name "foo*"` finds the files with the name foo* .
 
+15. `exec zsh` and `exec bash` switch between the two shells.
+
 ## Writing Scripts
 
 1. Put `#!/bin/bash` at the beginning of the script.
@@ -44,6 +46,10 @@ title: "Bash tips"
 1. `touch {a..z}{0001..0100}.txt` creates multiple files at once.
 
 2. `grep -r "hello" .` searches for hello recursively in the current directory.
+
+3. `wget --no-parent -r https://cnds.jacobs-university.de/courses/os-2019/src/` gets the content recursively.
+
+4. `find . -name "*html*" -delete` removes all files containing html.
 
 ## Resources
 
