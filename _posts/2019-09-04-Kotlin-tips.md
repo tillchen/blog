@@ -2,6 +2,11 @@
 layout: post
 title: "Kotlin tips"
 ---
+## Table of Contents
+
+* [Table of Contents](#table-of-contents)
+* [Basics](#basics)
+* [References](#references)
 
 ## Basics
 
@@ -63,6 +68,15 @@ title: "Kotlin tips"
     }
 
     var result = foo(1)
+
+    fun max(a: Int, b: Int): Int = if (a > b) a else b // also works
+    ```
+
+10. Loops:
+
+    ```kotlin
+    for (x in 1..100) prinln(x) // end inclusive
+    for (x in 1 until 100) prinln(x) // not end inclusive
     ```
 
 ## References

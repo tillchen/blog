@@ -72,6 +72,81 @@ title: "C and C++ tips"
     make
     ```
 
+## Templates
+
+1. Generic Functions:
+
+    ```c++
+    template <class T>
+    T array_sum(T arr[], int size) {
+        int i;
+        T sum = arr[0];
+        for (i = 1; i < size; i ++) {
+            sum = sum + arr[i];
+        }
+        return sum;
+    }
+    ```
+
+2. Generic Classes:
+
+    ```c++
+    template <class T>
+    class BoundedArray {
+        T array[size];
+    public:
+        BoundedArray(){};
+        T& operator[](int); // overloaded access operator
+    };
+
+    template<class T>
+    T& BoundedArray<T>::operator[](int pos) {
+        if ((pos < 0) || (pos >= size)) {
+            exit(1);
+        }
+        return array[pos];
+    }
+    // ...
+    BoundedArray<int> intArray;
+    ```
+
+## STL
+
+1. Vectors:
+
+    ```c++
+    #include <vector>
+    // ...
+    vector<int> vInt(5);
+    vInt.push_back(1); // .clear, .size, .pop_back
+    ```
+
+2. Deques: (Double Ended Queues)
+
+    ```c++
+    #include <deque>
+    // .push_front, .pop_front
+    ```
+
+3. Lists: (Doubly Linked Lists) (No random access.)
+
+4. Iterators:
+
+    ```c++
+    vector<int> vInt;
+    vector<int>::iterator vIterator;
+    for (vIterator = vInt.begin(); vIterator != vInt.end(); vIterator++) {}
+    ```
+
+5. Set: (insert, erase, clear, empty, size, find, count)
+
+6. Maps: (find, clear, erase, insert)
+
+    ```c++
+    map<const char*, int, LessThanStr> months;
+    months["january"] = 31;
+    ```
+
 ## Miscellaneous
 
 1. When we initialize an int vector, int array, etc., they are filled with 0s.
