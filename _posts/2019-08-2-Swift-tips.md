@@ -3,6 +3,10 @@ layout: post
 title: "Swift tips"
 ---
 
+* [Basics](#basics)
+* [OOP](#oop)
+* [References](#references)
+
 ## Basics
 
 1. How to compile and run:
@@ -94,14 +98,16 @@ title: "Swift tips"
     foo(bar: "Till")
     // A tuple can be used to return multiple values
     // Functions call also be returned (First-class functions)
-    // _ bar: String makes no argument label
+    // _ bar: String means no argument label when using called
     ```
 
 14. `.isEmpty` and `.count` (no parentheses.)
 
-15. By default, the `switch` in Swift doesn't fall through, which means we don't need `break`. (If needed, `fallthrough` can be added.)
+15. By default, the `switch` in Swift doesn't fall through, which means we don't need `break`. (If needed, `fallthrough` can be added.) Multiple conditions are allowed: `case "a", "e", "i", "o", "u"`. Range values are allowed: `case 0...9`.
 
-16. `@discardableResult func foo() -> String {}` means the return is deiscardable.
+16. `@discardableResult func foo() -> String {}` means the return is discardable.
+
+17. `Double(x)` converts the type to Double.
 
 ## OOP
 
@@ -133,3 +139,5 @@ title: "Swift tips"
 * The Swift Programming Language
 
 * [iOS Programming: The Big Nerd Ranch Guide](https://www.amazon.com/iOS-Programming-Ranch-Guide-Guides/dp/0134682335/ref=sr_1_2?keywords=ios+programming&qid=1564912891&s=gateway&sr=8-2)
+
+* App Development with Swift
