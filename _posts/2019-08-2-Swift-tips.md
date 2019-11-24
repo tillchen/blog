@@ -52,6 +52,9 @@ title: "Swift tips"
 
     ```swift
     var emptyArray = [String]()
+    emptyArray.append("first")
+    emptyArray += ["second", "third"]
+    emptyArray.insert("fourth", at: 3)
     var emptyDictionary = [String: Float]()
     // Or below if the type can be inferred
     var emptyArray = []
@@ -98,16 +101,28 @@ title: "Swift tips"
     foo(bar: "Till")
     // A tuple can be used to return multiple values
     // Functions call also be returned (First-class functions)
-    // _ bar: String means no argument label when using called
+    // _ bar: String means no argument label when being called
     ```
 
-14. `.isEmpty` and `.count` (no parentheses.)
+14. String methods:
+    * `.isEmpty` and `.count` (no parentheses) (.count is for length).
+    * `.lowercased()`
+    * `.hasPrefix()`, `.hasSuffix()`, `contains()`
 
 15. By default, the `switch` in Swift doesn't fall through, which means we don't need `break`. (If needed, `fallthrough` can be added.) Multiple conditions are allowed: `case "a", "e", "i", "o", "u"`. Range values are allowed: `case 0...9`.
 
 16. `@discardableResult func foo() -> String {}` means the return is discardable.
 
 17. `Double(x)` converts the type to Double.
+
+18. `.toggle()` toggles boolean values.
+
+19. The default type for a char is `String`:
+
+    ```swift
+    let a = "a" // String
+    let b : Character = "b" // Character
+    ```
 
 ## OOP
 
@@ -133,6 +148,10 @@ title: "Swift tips"
 3. Use `===` and `!==` to see if two references are referring to the same object.
 
 4. A convenience initializer is like a helper, which always calls another initializer in the same class. `convenience init()`
+
+5. `mutating func` changes a property.
+
+6. `willSet` and `didSet` are property observers.
 
 ## References
 
