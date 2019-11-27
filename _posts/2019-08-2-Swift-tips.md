@@ -73,7 +73,7 @@ title: "Swift tips"
     * `for i in 0...4 {}` is equivalent to `for i in range(0, 5):` in python.
     * `for (index, value) in shoppingList.enumerated()` gives tuples: (0, foo), (1, bar)
 
-10. Add `?` to indicate that the value might be missing: `var optionalString: String? = "foo"` (it can later be set to `nil`.) (Normal variables can't be `nil`.)
+10. Optionals: add `?` to indicate that the value might be missing: `var optionalString: String? = "foo"` (it can later be set to `nil`.) (The type is required to init a nil.)
 
 11. Use `??` to provide a default value for an optional:
 
@@ -88,6 +88,10 @@ title: "Swift tips"
     ```swift
     if let constantName = someOptional { // if the value != nil
         // statements
+    }
+    ...
+    if let theApartmentNumber = person.residence?.address?.apartmentNumber {
+        // optional chaining
     }
     ```
 
@@ -122,6 +126,24 @@ title: "Swift tips"
     ```swift
     let a = "a" // String
     let b : Character = "b" // Character
+    ```
+
+20. `Any` and `as?`:
+
+    ```swift
+    var items: [Any] = [5, "Bill", 6.7, Dog()]
+    if let firstItem = items[0] as? Int {
+        // Any is generic. as? is used for conditional casting
+    }
+    ```
+
+21. `enum`:
+
+    ```swift
+    enum CompassPoint {
+        case north, east, south, west
+    }
+    var compassHeading: CompassPoint = .west
     ```
 
 ## OOP
