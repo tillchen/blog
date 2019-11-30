@@ -6,6 +6,7 @@ title: "iOS development tips"
 * [Basics](#basics)
 * [View Controller Lifecycle:](#view-controller-lifecycle)
 * [MVC Architecture](#mvc-architecture)
+* [Project Organization](#project-organization)
 * [References](#references)
 
 ## Basics
@@ -47,6 +48,10 @@ title: "iOS development tips"
 ## MVC Architecture
 
 1. ![MVC image]({{https://tillchen.com}}/images/mvc.png)
+
+## Project Organization
+
+1. Example: ![project organization image]({{https://tillchen.com}}/images/ios_project_organization.jpeg)
 
 ## References
 
