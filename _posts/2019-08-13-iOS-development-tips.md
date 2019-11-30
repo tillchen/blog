@@ -4,6 +4,8 @@ title: "iOS development tips"
 ---
 
 * [Basics](#basics)
+* [View Controller Lifecycle:](#view-controller-lifecycle)
+* [MVC Architecture](#mvc-architecture)
 * [References](#references)
 
 ## Basics
@@ -31,6 +33,20 @@ title: "iOS development tips"
     ```swift
     performSegue(withIdentifier: "Foo", sender: nil)
     ```
+
+8. Right click and drag to a view controller to add the new view controller to the Tab Bar Controller (select view controllers).
+
+9. Connect the new ViewController file by setting the custom class attribute in storyboard.
+
+## View Controller Lifecycle:
+
+1. ![Lifecycle image]({{https://tillchen.com}}/images/ios_lifecycle.png)
+
+2. Detailed methods: <https://guides.codepath.com/ios/View-Controller-Lifecycle>
+
+## MVC Architecture
+
+1. ![MVC image]({{https://tillchen.com}}/images/mvc.png)
 
 ## References
 
