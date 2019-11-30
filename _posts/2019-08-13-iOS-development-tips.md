@@ -3,6 +3,9 @@ layout: post
 title: "iOS development tips"
 ---
 
+* [Basics](#basics)
+* [References](#references)
+
 ## Basics
 
 1. Model-View-Controller is a design pattern in iOS.
@@ -13,7 +16,21 @@ title: "iOS development tips"
 
 4. Actions: `@IBAction func showNextQuestion(_ sender: UIButton) {}` (Right click the item and drag it to the assistant editor to create the action.)
 
-5. Use `genstrings foo.swift` to generate the Localizable.strings file.
+5. Use `View Controller` to add new screens. Use Embed in > `Navigation Controller` to add a nav controller.
+
+6. Use this to pass info between screens:
+
+    ```swift
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination.navigationItem.title = textField.text
+    }
+    ```
+
+7. Use `performSegue` to create a segue programmatically (could be used for conditional segue.)
+
+    ```swift
+    performSegue(withIdentifier: "Foo", sender: nil)
+    ```
 
 ## References
 

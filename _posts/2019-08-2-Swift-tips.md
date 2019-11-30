@@ -146,6 +146,15 @@ title: "Swift tips"
     var compassHeading: CompassPoint = .west
     ```
 
+22. `guard`:
+
+    ```swift
+    guard let name = nameField.text else {
+        show("No name to submit")
+        return
+    }
+    ```
+
 ## OOP
 
 1. Use `init()` `super.init` and `self` to make a constructor (similar to python):
