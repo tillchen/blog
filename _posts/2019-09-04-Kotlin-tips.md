@@ -6,6 +6,7 @@ title: "Kotlin tips"
 
 * [Table of Contents](#table-of-contents)
 * [Basics](#basics)
+* [OOP](#oop)
 * [References](#references)
 
 ## Basics
@@ -18,29 +19,27 @@ title: "Kotlin tips"
     }
     ```
 
-2. Kotlin shell REPL: Read- Eval- Print- Loop
-
-3. Shorter `if`
+2. Shorter `if`
 
     ```kotlin
     println(if (x > y) "x is greater" else "x is not greater")
     ```
 
-4. `var` vs `val`:
+3. `var` vs `val`:
 
     * When using `var`, we can assign another value to the variable.
-    * When using `val`, the reference to the object stays forever. However, if the variable is an array, the array itself can be updated.
+    * When using `val`, the reference to the object stays forever. However, if the variable is an array, the array itself can be updated. (Similar to `let` in Swift)
 
-5. Primitive types are also objects controlled by references.
+4. Primitive types are also objects controlled by references.
 
-6. Similar to Swift, we can define the type:
+5. Similar to Swift, we can define the type:
 
     ```kotlin
     var z: Int = 6
     var x: Long = z.toLong() // similarly, toFloat(), to Byte(), etc.
     ```
 
-7. Arrays:
+6. Arrays:
 
     ```kotlin
     var myArray = arrayOf(1, 2, 3)
@@ -48,7 +47,7 @@ title: "Kotlin tips"
     var explicitArray: Array<Int> = arrayOf(1, 2, 3)
     ```
 
-8. Strings:
+7. Strings:
 
     ```kotlin
     var x = 42
@@ -59,7 +58,7 @@ title: "Kotlin tips"
     var firstItem = "The first item is ${myArray[0]}"
     ```
 
-9. Functions;
+8. Functions;
 
     ```kotlin
     fun foo(bar: Int): Int{ // Unit means no return value, or just omit it
@@ -72,11 +71,59 @@ title: "Kotlin tips"
     fun max(a: Int, b: Int): Int = if (a > b) a else b // also works
     ```
 
-10. Loops:
+9. Loops:
 
     ```kotlin
-    for (x in 1..100) prinln(x) // end inclusive
-    for (x in 1 until 100) prinln(x) // not end inclusive
+    for (x in 1..100) println(x) // end inclusive
+    for (x in 1 until 100) println(x) // not end inclusive
+    for (x in 15 downTo 1) println(x)
+    for (x in 1..100 step 2) println(x)
+    for (item in items) println(item)
+    ```
+
+10. Input:
+
+    ```kotlin
+    val userInput = readLine()
+    ```
+
+## OOP
+
+1. Example class:
+
+    ```kotlin
+    class Dog(val name: String, var weight: int, val breed: String) {
+        var temperament: String = ""
+        // All properties must be initialized.
+        // Or:
+        // lateinit var temperament = String
+        fun bark() {
+            println("Woof!")
+        }
+    }
+    ```
+
+2. Custom getters and setters:
+
+    ```kotlin
+    ...
+    val weightInKgs: Double
+        get() = weight / 2.2
+    var weight = weightParam
+        set(value) {
+            if (value > 0) field = value // field is a keyword
+        }
+    ...
+    ```
+
+3. In fact, the complier adds getters and setters automatically:
+
+    ```kotlin
+    var myProperty: String
+        get() = field
+        set(value) {
+            field = value
+        }
     ```
 
 ## References
