@@ -7,6 +7,7 @@ title: "Kotlin tips"
 * [Table of Contents](#table-of-contents)
 * [Basics](#basics)
 * [OOP](#oop)
+* [Nulls and Exceptions](#nulls-and-exceptions)
 * [References](#references)
 
 ## Basics
@@ -87,12 +88,25 @@ title: "Kotlin tips"
     val userInput = readLine()
     ```
 
+11. `when`:
+
+    ```kotlin
+    when (x) {
+        0 -> println("It's 0")
+        1, 2 -> println("It's 1 or 2")
+        else -> {
+            println("It's not 0.")
+            println("It's not 1 nor 2.")
+        }
+    }
+    ```
+
 ## OOP
 
 1. Example class:
 
     ```kotlin
-    class Dog(val name: String, var weight: int, val breed: String) {
+    class Dog(val name: String, var weight: int, val breed: String = "default") {
         var temperament: String = ""
         // All properties must be initialized.
         // Or:
@@ -125,6 +139,63 @@ title: "Kotlin tips"
             field = value
         }
     ```
+
+4. Classes, variables, and methods are final by default. To enable inheritance and overriding, add `open` before them. We also need to add `override` to variables.
+
+5. The `init {}` blocks are called during initialization.
+
+6. If a property is defined using `val` in the superclass, we must override it in the subclass if we want to assign a new value to it. However, if it's defined using `var`, we just need to reassign it in the `init {}` block without using `override`.
+
+7. `abstract` for classes, variables, and methods. These properties must all be overridden later.
+
+8. An `interface` lets us define common behavior OUTSIDE a superclass hierarchy. (Not IS-A, but share a property.) A class can have multiple interfaces, but can only inherit from a single direct superclass. `class X: A, B {}` (No parentheses. `class X: A()` means we are inheriting.)
+
+9. Use `is` to check the type: `if (animal is Wolf)`. And use `as` for explicit casting.
+
+10. `Any` is the superclass of everything.
+
+11. Add `data` to the start of the class to make it behave like a `struct` in Swift. Then we can use `==` or `.equals` to test the equivalence. (Equal objects have the same `.hashCode()` value.) (And `.toString()` returns the value of each property.) (BTW, `===` is used for referential check (identity).)
+
+12. For `data`, we have:
+
+    ```kotlin
+    val (title, number) = r
+    // is equivalent to
+    val title = r.component1
+    val number = r.component2
+    ```
+
+13. Named arguments (`var r = Recipe(title = "title", foo = "bar")`) are also available like in Swift.
+
+14. Secondary constructors:
+
+    ```kotlin
+    constructor(foo: Boolean) : this(0, foo) {} // calls the primary constructor
+    ```
+
+## Nulls and Exceptions
+
+1. Use `?` for nullable objects just like in Swift.
+
+2. `w?.eat()` is a safe call. It's only called when w is not null.
+
+3. Like optional binding in Swift, use `let`:
+
+    ```kotlin
+    w?.let {
+        // executed when w is not null
+    }
+    ```
+
+4. The Elvis operator `?:`
+
+    ```kotlin
+    w?.hunger ?: -1 // if null, return -1
+    ```
+
+5. `!!` is like `!` in Swift. It throws a NullPointerException if the value is null: `w!!.hunger`.
+
+6. Like Java, the same `try catch finally` block for exception handling. And the same `throw`.
 
 ## References
 
