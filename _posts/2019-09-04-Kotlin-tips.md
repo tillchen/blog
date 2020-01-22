@@ -231,6 +231,22 @@ title: "Kotlin tips"
     println(convert(1, {c: Double -> c * 1.8 + 32}))
     ```
 
+4. `.min()` and `.max()` work with basic types: `val mMax = mList.max()`
+
+5. `minBy {}` and `maxBy {}` work with all types: `val mMaxQuantity = groceries.maxBy {it.quantity}`. Also `sumBy {}` and `sumByDouble {}` : `mMap.values.sumBy {it}`
+
+6. `filter {}`: `val pricesOver3 = groceries.filter {it.price > 3.0}`. Also `filterNot {}`.
+
+7. `map {}`: `val doubleInts = ints.map {it * 2}`
+
+8. `forEach {}`: `groceries.forEach {println(it.name)}`
+
+9. Closure means that a lambda can access any local variable that it captures.
+
+10. `groupBy {}` returns a `Map`.
+
+11. `fold {}`: `val sumOfInts = ints.fold(0) {mSum, item -> mSum + item}`
+
 ## References
 
 * [Head First Kotlin: A Brain-Friendly Guide](https://www.amazon.com/Head-First-Kotlin-Brain-Friendly-Guide/dp/1491996692/ref=sr_1_1?keywords=head+first+kotlin&qid=1567580813&s=gateway&sr=8-1)
