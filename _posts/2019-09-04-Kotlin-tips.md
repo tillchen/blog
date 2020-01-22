@@ -8,6 +8,8 @@ title: "Kotlin tips"
 * [Basics](#basics)
 * [OOP](#oop)
 * [Nulls and Exceptions](#nulls-and-exceptions)
+* [Collections](#collections)
+* [Lambdas and Higher-Order Functions](#lambdas-and-higher-order-functions)
 * [References](#references)
 
 ## Basics
@@ -196,6 +198,38 @@ title: "Kotlin tips"
 5. `!!` is like `!` in Swift. It throws a NullPointerException if the value is null: `w!!.hunger`.
 
 6. Like Java, the same `try catch finally` block for exception handling. And the same `throw`.
+
+## Collections
+
+1. `List`, `Set`, `Map`, `MutableList`, `MutableSet`, `MutableMap`.
+
+2. `listOf()`, `mutableListOf()`. `mList.set(1, "foo")`, `.shuffle()`
+
+3. `mapOf(0 to 'a', 1 to 'b', 2 to 'c')` `for ((key, value) in mMap)`
+
+4. Add `out` (`<out E>`) to make the generics covariant (use a subtype instead of a supertype) - achieving polymorphism. Add `in` to make it contravariant - the opposite of covariance.
+
+## Lambdas and Higher-Order Functions
+
+1. We can assign a lambda to a variable:
+
+    ```kotlin
+    val addFive: (Int) -> Int = {x: Int -> x + 5}
+    val result = addFive.invoke(1) // 6
+    // or
+    val result = addFive(1)
+    ```
+
+2. `{it + 5}` is equivalent to `{x -> x + 5}`.
+
+3. Lambdas can also be passed to functions.
+
+    ```kotlin
+    fun convert(x: Double, converter: (Double) -> Double) : Double {
+        return converter(x)
+    }
+    println(convert(1, {c: Double -> c * 1.8 + 32}))
+    ```
 
 ## References
 
