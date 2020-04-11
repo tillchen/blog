@@ -35,6 +35,8 @@ title: "Bash tips"
 
 15. `exec zsh` and `exec bash` switch between the two shells.
 
+16. Control N clears the current line.
+
 ## Writing Scripts
 
 1. Put `#!/bin/bash` at the beginning of the script.
@@ -50,6 +52,8 @@ title: "Bash tips"
 3. `wget --no-parent -r https://cnds.jacobs-university.de/courses/os-2019/src/` gets the content recursively.
 
 4. `find . -name "*html*" -delete` removes all files containing html.
+
+5. `command &` to run the command in the background.
 
 ## Resources
 
