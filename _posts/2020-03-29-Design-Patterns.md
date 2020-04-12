@@ -9,6 +9,7 @@ title: "Design Patterns"
 * [The Factory Pattern](#the-factory-pattern)
 * [The Singleton Pattern](#the-singleton-pattern)
 * [The Command Pattern](#the-command-pattern)
+* [Adapter Pattern](#adapter-pattern)
 * [References](#references)
 
 ## Basics
@@ -107,7 +108,14 @@ title: "Design Patterns"
 
 2. UML:
    * ![Command]({{https://tillchen.com}}/images/command.png)
-   * Example: ![Command example]({{https://tillchen.com}}/images/command_example.png)
+
+## Adapter Pattern
+
+1. The adapter pattern converts the interface of a class into another interface the clients expect. It lets classes work together that couldn't otherwise because of incompatible interfaces.
+
+2. UML:
+   * ![Adapter1]({{https://tillchen.com}}/images/adapter1.png)
+   * ![Adapter2]({{https://tillchen.com}}/images/adapter2.png)
 
 ## References
 
