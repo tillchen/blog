@@ -7,6 +7,7 @@ title: "Design Patterns"
 * [The Observer Pattern](#the-observer-pattern)
 * [The Decorator Pattern](#the-decorator-pattern)
 * [The Factory Pattern](#the-factory-pattern)
+* [The Singleton Pattern](#the-singleton-pattern)
 * [References](#references)
 
 ## Basics
@@ -81,6 +82,23 @@ title: "Design Patterns"
     * No class should derive from a concrete class.
 
 4. The abstract factory pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+## The Singleton Pattern
+
+1. The singleton pattern restricts the instantiation of a class to one single instance, and provides a global point of access to it:
+
+    ```java
+    public class Singleton {
+        private static Singleton uniqueInstance;
+        private Singleton() {} // PRIVATE constructor
+        public static synchronized Singleton getInstance() { // remove synchronized if there's no multithreading
+            if (uniqueInstance == null) {
+                uniqueInstance = new Singleton();
+            }
+            return uniqueInstance;
+        }
+    }
+    ```
 
 ## References
 
