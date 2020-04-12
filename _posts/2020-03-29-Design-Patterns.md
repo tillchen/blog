@@ -5,6 +5,7 @@ title: "Design Patterns"
 
 * [Basics](#basics)
 * [The Observer Pattern](#the-observer-pattern)
+* [The Decorator Pattern](#the-decorator-pattern)
 * [References](#references)
 
 ## Basics
@@ -43,6 +44,26 @@ title: "Design Patterns"
     ```
 
 5. In Java, Observable is a class, which means we have to subclass it.
+
+6. UML:
+   * ![Observer]({{https://tillchen.com}}/images/observer.png)
+   * Example: ![Observer example]({{https://tillchen.com}}/images/observer_example.png)
+
+## The Decorator Pattern
+
+1. The open-closed principle: classes should be open for extension, but closed for modification.
+
+2. Decorators have the same supertype as the object they decorate.
+
+3. You can use one or more decorators to wrap (HAS-A) an object.
+
+4. The decorator adds its own behavior either before and/or after delegating to the object it decorates to do the rest of the job.
+
+5. The decorator pattern attaches additional responsibilities to an object dynamically.
+
+6. UML:
+   * ![Decorator]({{https://tillchen.com}}/images/decorator.png)
+   * Example: ![Decorator example]({{https://tillchen.com}}/images/decorator_example.png)
 
 ## References
 
