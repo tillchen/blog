@@ -6,6 +6,7 @@ title: "Design Patterns"
 * [Basics](#basics)
 * [The Observer Pattern](#the-observer-pattern)
 * [The Decorator Pattern](#the-decorator-pattern)
+* [The Factory Pattern](#the-factory-pattern)
 * [References](#references)
 
 ## Basics
@@ -51,7 +52,7 @@ title: "Design Patterns"
 
 ## The Decorator Pattern
 
-1. The open-closed principle: classes should be open for extension, but closed for modification.
+1. **The open-closed principle**: classes should be open for extension, but closed for modification.
 
 2. Decorators have the same supertype as the object they decorate.
 
@@ -64,6 +65,22 @@ title: "Design Patterns"
 6. UML:
    * ![Decorator]({{https://tillchen.com}}/images/decorator.png)
    * Example: ![Decorator example]({{https://tillchen.com}}/images/decorator_example.png)
+
+7. `java.io` is mainly using the decorator pattern.
+
+## The Factory Pattern
+
+1. The factory method pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+
+2. UML:
+   * ![Factory]({{https://tillchen.com}}/images/factory.png)
+   * Example: ![Factory example]({{https://tillchen.com}}/images/factory_example.png)
+
+3. **The dependency inversion principle**: Depend upon abstractions. Do not depend upon concrete classes. High-level components should not depend on low-level components; rather, they should both depend on abstractions.
+    * No variables should hold a reference to a concrete class.
+    * No class should derive from a concrete class.
+
+4. The abstract factory pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 
 ## References
 
