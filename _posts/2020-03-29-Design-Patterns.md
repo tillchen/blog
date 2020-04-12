@@ -9,7 +9,9 @@ title: "Design Patterns"
 * [The Factory Pattern](#the-factory-pattern)
 * [The Singleton Pattern](#the-singleton-pattern)
 * [The Command Pattern](#the-command-pattern)
-* [Adapter Pattern](#adapter-pattern)
+* [The Adapter Pattern](#the-adapter-pattern)
+* [The Facade Pattern](#the-facade-pattern)
+* [The Template Method Pattern](#the-template-method-pattern)
 * [References](#references)
 
 ## Basics
@@ -109,13 +111,43 @@ title: "Design Patterns"
 2. UML:
    * ![Command]({{https://tillchen.com}}/images/command.png)
 
-## Adapter Pattern
+## The Adapter Pattern
 
 1. The adapter pattern converts the interface of a class into another interface the clients expect. It lets classes work together that couldn't otherwise because of incompatible interfaces.
 
 2. UML:
    * ![Adapter1]({{https://tillchen.com}}/images/adapter1.png)
    * ![Adapter2]({{https://tillchen.com}}/images/adapter2.png)
+
+## The Facade Pattern
+
+1. The facade pattern provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+
+2. **Principle of Least Knowledge**: talk only to your immediate friends.
+
+## The Template Method Pattern
+
+1. The template method pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure:
+
+    ```java
+    abstract class AbstractClass {
+        final void templateMethod() {
+            primitiveOperation1();
+            primitiveOperation2();
+            concreteOperation();
+        }
+
+        abstract void primitiveOperation1();
+
+        abstract void primitiveOperation2();
+
+        void concreteOperation() {
+            // implementation here
+        }
+    }
+    ```
+
+2. **The Hollywood Principle (aka. Inversion of Control)**: (High-level components) Don't call us, we'll call you (low-level components).
 
 ## References
 
