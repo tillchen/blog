@@ -8,6 +8,7 @@ title: "Design Patterns"
 * [The Decorator Pattern](#the-decorator-pattern)
 * [The Factory Pattern](#the-factory-pattern)
 * [The Singleton Pattern](#the-singleton-pattern)
+* [The Command Pattern](#the-command-pattern)
 * [References](#references)
 
 ## Basics
@@ -99,6 +100,14 @@ title: "Design Patterns"
         }
     }
     ```
+
+## The Command Pattern
+
+1. The command pattern encapsulates a request as an object, thereby letting you parameterize other objects with different requests and support undoable operations.
+
+2. UML:
+   * ![Command]({{https://tillchen.com}}/images/command.png)
+   * Example: ![Command example]({{https://tillchen.com}}/images/command_example.png)
 
 ## References
 
