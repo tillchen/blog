@@ -12,6 +12,8 @@ title: "Design Patterns"
 * [The Adapter Pattern](#the-adapter-pattern)
 * [The Facade Pattern](#the-facade-pattern)
 * [The Template Method Pattern](#the-template-method-pattern)
+* [The State Pattern](#the-state-pattern)
+* [The Proxy Pattern](#the-proxy-pattern)
 * [References](#references)
 
 ## Basics
@@ -148,6 +150,22 @@ title: "Design Patterns"
     ```
 
 2. **The Hollywood Principle (aka. Inversion of Control)**: (High-level components) Don't call us, we'll call you (low-level components).
+
+3. **Single responsibility:**: a class should have only one reason to change.
+
+## The State Pattern
+
+1. The state pattern allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
+
+2. It's close to the concept of finite-state machines.
+
+## The Proxy Pattern
+
+1. A remote proxy acts as a local representative to a remote object.
+
+2. Java RMI's (remote method invocation) client helper is a "stub" and the service helper is a "skeleton". The stub is the proxy.
+
+3. The proxy pattern provides a surrogate or placeholder for another object to access it.
 
 ## References
 
