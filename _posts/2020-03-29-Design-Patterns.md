@@ -14,6 +14,8 @@ title: "Design Patterns"
 * [The Template Method Pattern](#the-template-method-pattern)
 * [The State Pattern](#the-state-pattern)
 * [The Proxy Pattern](#the-proxy-pattern)
+* [Model-View-Controller](#model-view-controller)
+* [Design Patterns](#design-patterns)
 * [References](#references)
 
 ## Basics
@@ -166,6 +168,20 @@ title: "Design Patterns"
 2. Java RMI's (remote method invocation) client helper is a "stub" and the service helper is a "skeleton". The stub is the proxy.
 
 3. The proxy pattern provides a surrogate or placeholder for another object to access it.
+
+## Model-View-Controller
+
+1. The MVC is using:
+    * the strategy pattern: the view delegates to the controllers to handle user actions. (Swappable controllers.)
+    * the composite pattern: the view is a composite of GUI components.
+    * the observer pattern: the model is the observable, and the view & controller are observers.
+
+## Design Patterns
+
+1. Categories:
+    * Creational: Factory, Singleton
+    * Behavioral (how classes communicate): State, Iterator, Command
+    * Structural: Adapter, Composite, Decorator, Facade, Proxy
 
 ## References
 
